@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reports</title>
   <!-- Bootstrap CSS link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700"
+    rel="stylesheet">
 
   <style>
-    .row-graph{
+    .row-graph {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -18,9 +20,11 @@
       /* background-color: black; */
       justify-content: space-between;
       padding: 10px 20px;
+      margin-right: 180px;
     }
   </style>
 </head>
+
 <body>
   {% include 'includes/sidebar.html' %}
   <div style=" margin-left: 250px;margin-top: 50px; ">
@@ -32,7 +36,7 @@
           <h2 style="text-align: center; margin-top: 40px;">Type 1</h2>
         </div>
         <div class="ml-2">
-          <canvas id="lineChart" height="500px" width="500px" ></canvas>
+          <canvas id="lineChart" height="500px" width="500px"></canvas>
           <h2 style="text-align: center; margin-top: 40px;">Type 1</h2>
         </div>
       </div>
@@ -45,13 +49,13 @@
           <h2 style="text-align: center; margin-top: 40px;">Type 1</h2>
         </div>
         <div class="ml-2">
-          <canvas id="stackedBarChart" height="500px" width="500px" ></canvas>
+          <canvas id="stackedBarChart" height="500px" width="500px"></canvas>
           <h2 style="text-align: center; margin-top: 40px;">Type 1</h2>
         </div>
       </div>
     </div>
   </div>
-    
+
   <!-- Chart.js script -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
@@ -87,7 +91,7 @@
     var ctx = document.getElementById('histogramChart').getContext('2d');
     var histogramChart = new Chart(ctx, config);
   </script>
-  
+
   <!-- line chart -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
@@ -125,7 +129,7 @@
     var lineChart = new Chart(ctx, config1);
   </script>
 
- 
+
   <!-- Stack Bar Chart -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
@@ -213,4 +217,5 @@
     var myChart = new Chart(ctx, config5);
   </script>
 </body>
+
 </html>
